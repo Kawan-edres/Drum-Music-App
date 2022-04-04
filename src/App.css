@@ -1,38 +1,72 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height:120vh;
+  background-color: #293241;
+
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3{
+  /* background-color: red; */
+  font-size: 2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 2px solid black;
+  background-color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.crash{
+
+  background-image: url("./Images/crash.png");
+  background-size:cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.kick{
+  background-image: url("./Images/kick.png");
+  background-size:cover;
+  object-fit: cover;
+
+}
+.snare{
+  background-image: url("./Images/snare.png");
+  background-size:cover;
+  object-fit: cover;
+
+
+}
+
+.tom1{
+  background-image: url("./Images/tom1.png");
+  background-size:cover;
+  object-fit: cover;
+
+
+}
+.tom2{
+  background-image: url("./Images/tom2.png");
+  background-size:cover;
+  object-fit: cover;
+  
+}
+.tom3{
+  background-image: url("./Images/tom3.png");
+  background-size:cover;
+  object-fit: cover;
+  
+  
+}
+.tom4{
+  background-image: url("./Images/tom4.png");
+  background-size:cover;
+  object-fit: cover;
+  
+  
+  
 }
