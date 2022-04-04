@@ -19,6 +19,8 @@ import T3 from "../Sounds/tom3.mp3";
 import T4 from "../Sounds/tom4.mp3";
 import Footer from "./Fotter";
 
+
+
 const Body = () => {
   const cr = new Audio(Cr);
   const k = new Audio(K);
@@ -79,42 +81,73 @@ const Body = () => {
     },150)
   }
 
+  function clickHandler(e){
+
+    switch(e.target.id){
+      case "crash":
+        cr.play();
+        break;
+      case "kick":
+        k.play();
+        break;
+      case "snare":
+        s.play();
+        break;
+      case "tom1":
+        t1.play();
+        break;
+      case "tom2":
+        t2.play();
+        break;
+      case "tom3":
+        t3.play();
+        break;
+      case "tom4":
+        t4.play();
+        break;
+      default:
+        break;
+
+    }
+
+  }
+
   
   return (
-    <BodyStyled>
+    <BodyStyled >
       <h1>Drum Kit App 🥁</h1>
-      <div  className="body-container">
-        <div  className="crash box w">
-         <h3>W</h3>
+      <div onClick={clickHandler}   className="body-container">
+        <div id="crash"  className="crash box w">
+         <h3 id="crash">W</h3>
          
         </div>
-        <div className="kick box a">
-        <h3>A</h3>
+        <div id="kick" className="kick box a">
+        <h3 id="kick">A</h3>
 
          
         
         </div>
-        <div className="snare box s">
-        <h3>S</h3>
+        <div id="snare" className="snare box s">
+        <h3 id="snare">S</h3>
          
         </div>
-        <div className="tom1 box d">
-        <h3>D</h3>
+        <div id="tom1" className="tom1 box d">
+        <h3 id="tom1">D</h3>
 
           
         </div>
-        <div className="tom2 box f">
-        <h3>F</h3>
+        <div id="tom2" className="tom2 box f">
+        <h3 id="tom2">F</h3>
 
          
         </div>
-        <div className="tom3 box g">
-        <h3>G</h3>
+        <div id="tom3" className="tom3 box g">
+        <h3 id="tom3">G</h3>
 
          
         </div>
-        <div className="tom4 box h">
-        <h3>H</h3>
+        <div id="tom4" className="tom4 box h">
+        <h3 id="tom4">H</h3>
 
          
         </div>
