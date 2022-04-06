@@ -1,14 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useState } from "react";
-
-import Crash from "../Images/crash.png";
-import Kick from "../Images/kick.png";
-import Snare from "../Images/snare.png";
-import Tom1 from "../Images/tom1.png";
-import Tom2 from "../Images/tom2.png";
-import Tom3 from "../Images/tom3.png";
-import Tom4 from "../Images/tom4.png";
 
 import Cr from "../Sounds/crash.mp3";
 import K from "../Sounds/kick.mp3";
@@ -61,13 +52,12 @@ const Body = () => {
       case "g":
         t3.play();
         break;
-
+      
       case "h":
         t4.play();
         break;
+      
 
-        default:
-          break;
     }
   };
 
@@ -82,6 +72,7 @@ const Body = () => {
   }
 
   function clickHandler(e){
+    animation(e.target.id);
 
     switch(e.target.id){
       case "crash":
@@ -163,10 +154,14 @@ const BodyStyled = styled.div`
   height: auto;
   background-color: #293241;
   text-align: center;
+  
+
 
   h1{
     padding: 3rem;
     color: white;
+  
+
   }
 
   .body-container {
@@ -174,6 +169,7 @@ const BodyStyled = styled.div`
     display: grid;
     /* grid-template-columns: repeat(); */
     grid-template-columns: repeat(auto-fill, minmax(400px, 4fr));
+
     justify-items: center;
     align-items: center;
     grid-row-gap: 1rem;
@@ -184,6 +180,8 @@ const BodyStyled = styled.div`
   .box {
     width: 200px;
     height: 200px;
+
+
 
     
   }
@@ -196,7 +194,7 @@ const BodyStyled = styled.div`
   @media screen and (max-width:1200px) {
     .body-container {
     
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
    
   }
   }
@@ -209,11 +207,14 @@ const BodyStyled = styled.div`
     width: 150px;
     height: 150px;
 
+
+
     
   }
     .body-container {
     
     grid-template-columns: repeat(auto-fill, minmax(200px, 4fr));
+
    
   }
 
